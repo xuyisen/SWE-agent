@@ -1,13 +1,19 @@
 # Formerly called: anthropic_filemap.yaml
 # This template is heavily inspired by anthropic's computer use demo, but you can use
 # it with any LM.
+env:
+  repo:
+    path: test-repo
+  deployment:
+    image: python:3.12
+problem_statement:
+  path: test-repo/problem_statements/1a.md
+actions:
+  apply_patch_locally: True
 agent:
   model:
     name: ollama/qwen3:30b 
     api_base: http://localhost:11434
-    per_instance_cost_limit: 0   
-    total_cost_limit: 0
-    per_instance_call_limit: 100
     max_input_tokens: 0  
   templates:
     system_template: |-
