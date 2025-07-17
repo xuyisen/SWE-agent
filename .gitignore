@@ -5,7 +5,8 @@ cov.xml
 data/**
 *.env
 !tools/*
-
+trajectories/**
+!trajectories/demonstrations/**
 # -------- automatically generated files --------
 
 # Byte-compiled / optimized / DLL files
